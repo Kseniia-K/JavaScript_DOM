@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1</title>
+    <script>
+        let name = "Kseniia";
+        console.log(`Hello ${name}`);
+    </script>
+</head>
+<body>
+    <h1>Lesson 1</h1>
+    <script src="script.js">
+        // console.log("000");
+        // Если активен атрибут src, код между <script> будет игнорирован
+    </script>
+    <script>
+        console.log(this); // указание на внутренности объекта, мы говорим от лица этого объекта
+        // this без объекта – глобальный объект
+        // в браузере this === window (окно браузера)
+        // BOM – Browser Object Model (свойства и методы объекта  window)
+        console.log(window.innerHeight);
+        // Высота viewport в px === 100vh
+        console.log(innerHeight);
+        // Ширина viewport в px === 100vw
+        console.log(innerWidth);
+
+        // Диалоговые окна (окна с уведомлениями)
+
+        // name = prompt("Как твоё имя?", "Kseniia"); // string
+        // console.log(name);
+        // let isKseniia = confirm("Твоё имя Kseniia?");
+        // console.log(isKseniia);
+        // let str = isKseniia && name.toLowerCase() === "kseniia" ? "Привет!" : "Ты не пройдёшь";
+        // alert(str);
+
+        /*
+            screen – монитор компьютера
+            navigator – информация о системе
+            history – история посещений на одной вкладке (текущей)
+            location – адресная строка браузера
+
+            'http://127.0.0.1:5500/2023.01.12/index.html'
+           
+            protocol => http:
+            hostname => 127.0.0.1
+            port => 5500
+            pathname => путь к конечному адресу от корня сайта (/2023.01.12/index.html)
+            origin => основное название домена (протокол + хост + порт)
+            href => весь адрес страницы
+
+            location.reload()
+            location.replace(url)
+        */
+    </script>
+</body>
+</html>
+
+<!-- 
+    Элемент script следуетписать в самом конце html файла перед закрывающимся тегом </body>
+    
+    Это правило работает только тогда, когда javascript код использует html разметку
+    
+    Внутри тега head подключаются функции, классы, сторонние библиотеки (всё, что не работает с html-тегами напрямую)
+ -->
