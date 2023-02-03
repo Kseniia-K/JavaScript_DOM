@@ -64,22 +64,22 @@ function newNum (){
     let count = 0;
     let cells = document.body.firstElementChild.nextElementSibling.nextElementSibling.firstElementChild;
     let smallCells = cells.children;
-    // while (n < 31){
+    while (n < 31){
         for (let k = 0; k < smallCells.length; k++){
             let newCells = Array.from(smallCells[k].cells);
             for (let i = 0; i < newCells.length;){
                 newCells[i].textContent = "";
                 newCells[i].bgColor = "transparent";
-                // break;
+                break;
             }
             for (let i = 0; i < newCells.length; i++){
                 newCells[i].textContent = `${getNumber()}`;
                 if (newCells[i].innerText >= 50){
                     newCells[i].bgColor = "orange";
                 }
-                // return n++;
-                // break;
+                return n++;
+                // continue;
             }
         }
-    // }
+    }
 }
