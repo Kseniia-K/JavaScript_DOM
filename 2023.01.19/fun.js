@@ -24,7 +24,7 @@ function getFun(){
             content += `<div style="
                 background: ${getColor()};
                 width: ${n}px;
-                height: "${n}px;
+                height: ${n}px;
             "></div>`;
         }
     };
