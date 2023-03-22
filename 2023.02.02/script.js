@@ -32,6 +32,19 @@ function table(){
 }
 table();
 
+function newNum(){
+    let n = 1;
+    let count = 1;
+    let content = "<tr>";
+    for (let rows = 0; rows < n; rows++){
+        content += `
+            <td>${numbers[getIndex()]}</td>
+        `;
+    }
+    content += "</tr>";
+    document.body.innerHTML += content;
+}
+
 // let cells = document.body.firstElementChild.nextElementSibling.firstElementChild.firstElementChild;
 
 // let newCells = Array.from(cells.cells);
@@ -59,28 +72,28 @@ function getAccess(){
 }
 getAccess();
 
-function newNum (){
-    let n = 0;
-    let count = 0;
-    let cells = document.body.firstElementChild.nextElementSibling.nextElementSibling.firstElementChild;
-    let smallCells = cells.children;
-    // while (n < 31){
-        for (let k = 0; k < smallCells.length; k++){
-            let newCells = Array.from(smallCells[k].cells);
-            for (let i = 0; i < newCells.length;){
-                newCells[i].textContent = "";
-                newCells[i].bgColor = "transparent";
-                break;
-            }
-            for (let i = 0; i < newCells.length; i++){
-                newCells[i].textContent = `${getNumber()}`;
-                if (newCells[i].innerText >= 50){
-                    newCells[i].bgColor = "orange";
-                }
-                return;
-                // return n++;
-                // continue;
-            }
-        }
-    // }
-}
+// function newNum (){
+//     let n = 0;
+//     let count = 0;
+//     let cells = document.body.firstElementChild.nextElementSibling.nextElementSibling.firstElementChild;
+//     let smallCells = cells.children;
+//     // while (n < 31){
+//         for (let k = 0; k < smallCells.length; k++){
+//             let newCells = Array.from(smallCells[k].cells);
+//             for (let i = 0; i < newCells.length;){
+//                 newCells[i].textContent = "";
+//                 newCells[i].bgColor = "transparent";
+//                 break;
+//             }
+//             for (let i = 0; i < newCells.length; i++){
+//                 newCells[i].textContent = `${getNumber()}`;
+//                 if (newCells[i].innerText >= 50){
+//                     newCells[i].bgColor = "orange";
+//                 }
+//                 return;
+//                 // return n++;
+//                 // continue;
+//             }
+//         }
+//     // }
+// }
