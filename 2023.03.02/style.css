@@ -30,3 +30,23 @@ body {
 .btn:hover {
     opacity: 1;
 }
+.popup {
+    padding: 6px 12px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 0 blueviolet;
+    background-color: #fff;
+    position: fixed;
+    /* opacity: 0; */
+    transform: translate(-16px, calc(-100% - 8px));
+}
+.popup::before {
+    content: "";
+    position: absolute;
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    bottom: -5px;
+    border-radius: 2px;
+    box-shadow: 2px 2px 5px -2px blueviolet;
+    transform: rotate(45deg);   
+}

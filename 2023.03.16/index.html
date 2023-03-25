@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Til-tak-toe</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(to top right, gold, springgreen, cornflowerblue, palevioletred, lightcoral);
+        }
+        .board {
+            box-shadow: 0 0 5px 0 #0008, 0 0 15px 0 #0008;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            gap: 10px;
+            border-radius: 6px;
+            backdrop-filter: blur(4px);
+        }
+        .cell {
+            width: 60px;
+            height: 60px;
+            background-color: #fff5;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font: 40px monospace;
+            color: dimgray;
+        }
+        .cell:hover {
+            background-color: #fff9;
+        }
+    </style>
+</head>
+<body>
+    <div class="board"></div>
+    <script src="script.js"></script>
+</body>
+</html>

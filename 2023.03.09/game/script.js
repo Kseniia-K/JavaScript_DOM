@@ -24,7 +24,7 @@ for (let cnt of wordsLength) {
 
 function setWords(arr, cnt = 0, txt = "") {
     if (txt) {
-        arr = arr.filter(w => w.includes(txt.toLowerCase()))
+        arr = arr.filter(w => w.includes(txt.toLowerCase()));
     }
     if (+cnt) {
         arr = arr.filter(w => w.length === +cntEl.value);
@@ -39,7 +39,7 @@ function setWords(arr, cnt = 0, txt = "") {
 
 // function searchWords(arr, txt){
 //     container.innerHTML = "";
-//     arr = arr.filter(w => w.includes(txt.toLowerCase()))
+//     arr = arr.filter(w => w.includes(txt.toLowerCase()));
 //     console.log(arr.length);
 //     arr.forEach(w => {
 //         container.innerHTML += `<span>${w}</span>`
@@ -61,7 +61,7 @@ function setWords(arr, cnt = 0, txt = "") {
 //         setWords(words);
 //     }
 // });
-// searchEl.addEventListener("change", e =>{
+// searchEl.addEventListener("change", e => {
 //     if (searchEl.value) {
 //         searchWords(words, searchEl.value);
 //     } else {
@@ -73,7 +73,7 @@ cntEl.addEventListener("change", e => {
     setWords(words, e.target.value, searchEl.value);
 });
 searchEl.addEventListener("change", e => {
-    setWords(words, e.target.value, searchEl.value);
+    setWords(words, cntEl.value, e.target.value);
 });
 
 setWords(words);

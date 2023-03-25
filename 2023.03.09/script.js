@@ -1,17 +1,16 @@
 const setBg = e => {
-    e.preventDefault(); // остановить соббытие, заданное браузером по умолчанию (a / form / button)
+    e.preventDefault(); // остановить событие, заданное браузером по умолчанию (a / form / button)
     e.stopPropagation();
     console.log(e.currentTarget);
     e.currentTarget.style.backgroundColor = getColor(getNumber(101));
 }
 
-document.body.addEventListener("click", setBg);
-
 const sq = document.querySelector(".square");
 const link = sq.firstElementChild;
 
-document.body.addEventListener("click", setBg);
+// document.body.addEventListener("click", setBg);
 sq.addEventListener("click", setBg);
+link.addEventListener("click", setBg);
 
 const txtEl = document.querySelector(".card__text");
 const picEl= txtEl.previousElementSibling;
@@ -46,10 +45,10 @@ form.addEventListener("submit", e => {
             console.log(el);
             switch (el.name) {
                 case "txt":
-                txtEl.innerHTML += el.value ? `<div>${el.value}</div>` : "";
+                    txtEl.innerHTML += el.value ? `<div>${el.value}</div>` : "";
                 break;
                 case "pic":
-                    picEl.style.backgroundImage  = `url(${el/value})`;
+                    picEl.style.backgroundImage  = `url(${el.value})`;
                 break;
             }
         }
